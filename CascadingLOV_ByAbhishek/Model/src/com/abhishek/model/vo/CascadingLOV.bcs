@@ -1,0 +1,12 @@
+//Groovy Scripts for com.abhishek.model.vo.CascadingLOV
+
+package com.abhishek.model.vo
+
+import oracle.jbo.script.annotation.AccessorParameterExpression;
+
+@AccessorParameterExpression(accessorName="EmployeesVO1", name="deptId")
+def deptId_EmployeesVO1_BindVariable_BoundParameter()
+{
+Departmentname
+}
+

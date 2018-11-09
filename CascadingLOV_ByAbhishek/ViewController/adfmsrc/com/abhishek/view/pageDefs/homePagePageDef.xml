@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="homePagePageDef"
+                Package="com.abhishek.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CascadingLOV1" RangeSize="25" DataControl="AppModuleDataControl" id="CascadingLOV1Iterator"/>
+  </executables>
+  <bindings>
+    <list IterBinding="CascadingLOV1Iterator" StaticList="false" Uses="LOV_Departmentname" id="Departmentname"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="CascadingLOV1Iterator" StaticList="false" Uses="LOV_Employeename" id="Employeename"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="homePage.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:selectOneChoice value="#{bindings.Departmentname.inputValue}" label="#{bindings.Departmentname.label}"
+                                required="#{bindings.Departmentname.hints.mandatory}"
+                                shortDesc="#{bindings.Departmentname.hints.tooltip}" id="soc1" autoSubmit="true">
+                <f:selectItems value="#{bindings.Departmentname.items}" id="si1"/>
+                <f:validator binding="#{bindings.Departmentname.validator}"/>
+            </af:selectOneChoice>
+            <af:selectOneChoice value="#{bindings.Employeename.inputValue}" label="#{bindings.Employeename.label}"
+                                required="#{bindings.Employeename.hints.mandatory}"
+                                shortDesc="#{bindings.Employeename.hints.tooltip}" id="soc2" partialTriggers="soc1">
+                <f:selectItems value="#{bindings.Employeename.items}" id="si2"/>
+                <f:validator binding="#{bindings.Employeename.validator}"/>
+            </af:selectOneChoice>
+        </af:form>
+    </af:document>
+</f:view>
